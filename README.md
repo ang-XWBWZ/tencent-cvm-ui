@@ -26,6 +26,22 @@ A modern Web UI for Tencent Cloud CVM management, including instance purchase, i
 - **Language:** Java, JavaScript
 - **Cloud Integration:** Tencent Cloud CVM / Billing related APIs
 
+
+## Tencent Cloud SDK
+
+This project uses the following Tencent Cloud SDK selection:
+
+- **CVM SDK**
+  - Artifact: `com.tencentcloudapi:tencentcloud-sdk-java-cvm`
+  - Version: `3.1.1290`
+- **Billing capability**
+  - The dedicated Billing SDK dependency is currently not enabled in this project
+  - Billing OpenAPI access is implemented through a custom integration layer based on the available Tencent Cloud Java SDK/common client approach
+
+Official open-source repository:
+
+- <https://github.com/TencentCloud/tencentcloud-sdk-java>
+
 ## Project Structure
 
 ```text

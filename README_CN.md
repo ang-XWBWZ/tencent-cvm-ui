@@ -32,6 +32,22 @@
 - 账单与余额查看
 - 导入 / 导出模板
 
+
+## 腾讯云 SDK 选型
+
+当前项目采用的腾讯云 SDK 方案如下：
+
+- **CVM SDK**
+  - Maven 坐标：`com.tencentcloudapi:tencentcloud-sdk-java-cvm`
+  - 版本：`3.1.1290`
+- **Billing 能力**
+  - 当前项目中**未直接启用**独立的 Billing SDK 依赖
+  - 账单相关能力通过项目内的自定义封装层接入 Tencent Billing OpenAPI
+
+腾讯云 SDK 官方开源仓库：
+
+- <https://github.com/TencentCloud/tencentcloud-sdk-java>
+
 ## 项目结构
 
 ```text
