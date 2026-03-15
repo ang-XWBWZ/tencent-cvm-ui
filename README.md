@@ -1,46 +1,88 @@
 # Tencent CVM UI
 
-一个面向腾讯云 CVM 的 Web 管理界面项目，提供实例购买、实例管理与账单查看等功能。
-
-## 项目定位
-
-这是一个正规的工程化项目，包含：
-
-- 前端界面（Vue 3 + Element Plus）
-- 后端服务（Spring Boot）
-- CVM 相关接口封装
-- 基础文档与变更记录
-
-## 主要功能
-
-- CVM 实例购买
-- 地区、可用区、规格、镜像筛选
-- 实例管理（开机、关机、重启、销毁、续费、修改名称）
-- 账单与余额查看
-- 导入 / 导出模板
-
-## 项目截图
+A modern Web UI for Tencent Cloud CVM management, including instance purchase, instance operations, and billing overview.
 
 ![Tencent CVM UI](docs/images/ui-screenshot-2026-03-15.png)
 
-## 技术栈
+## Features
 
-- Frontend: Vue 3, Vite, Element Plus
-- Backend: Spring Boot, Maven
-- API: Tencent Cloud CVM / Billing related integration
+- Instance purchase workflow
+- Region / zone / instance type / image selection
+- Instance lifecycle management
+  - Start
+  - Stop
+  - Reboot
+  - Destroy
+  - Renew
+  - Rename
+- Billing and balance overview
+- Import / export templates
+- Frontend + backend integrated project structure
 
-## 目录结构
+## Tech Stack
+
+- **Frontend:** Vue 3, Vite, Element Plus
+- **Backend:** Spring Boot, Maven
+- **Language:** Java, JavaScript
+- **Cloud Integration:** Tencent Cloud CVM / Billing related APIs
+
+## Project Structure
 
 ```text
-frontend-elementplus/   前端项目
-src/main/java/          后端源码
-src/main/resources/     配置与静态资源
-scripts/                开发/部署辅助脚本
+frontend-elementplus/   Frontend application
+src/main/java/          Backend source code
+src/main/resources/     Config and static resources
+docs/                   Project documentation
+scripts/                Helper scripts
 ```
 
-## 说明
+## Quick Start
 
-当前仓库为 GitHub 专用整理版，已移除部署环境相关隐私信息与内部敏感配置。
+### Frontend
+
+```bash
+cd frontend-elementplus
+npm install
+npm run dev
+```
+
+### Backend
+
+```bash
+mvn spring-boot:run
+```
+
+## Deployment
+
+For deployment details, see:
+
+- [Deployment Guide](docs/deployment.md)
+
+## Releases
+
+You can publish a GitHub release in two common ways.
+
+### Option 1: Create a tag and push it
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+Then create a Release in GitHub based on that tag.
+
+### Option 2: Use GitHub CLI
+
+```bash
+gh release create v1.0.0 --title "v1.0.0" --notes "First public release"
+```
+
+If the tag does not exist yet, `gh` can create it for you.
+
+## Notes
+
+This repository is a GitHub-ready sanitized edition.
+Environment-specific deployment details, private infrastructure data, and sensitive internal configuration have been removed.
 
 ## License
 
