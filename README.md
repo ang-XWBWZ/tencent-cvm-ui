@@ -68,6 +68,20 @@ npm run dev
 mvn spring-boot:run
 ```
 
+
+## Dependencies / SDK Selection
+
+### Tencent Cloud SDK
+
+- CVM SDK: `com.tencentcloudapi:tencentcloud-sdk-java-cvm`
+- Version: `3.1.1290`
+- Official repository: <https://github.com/TencentCloud/tencentcloud-sdk-java>
+
+### Notes on Billing
+
+The Billing capability in this project is integrated through the project's own adaptation layer.
+The dedicated Billing SDK dependency is not directly enabled in the current repository edition.
+
 ## Deployment
 
 For deployment details, see:

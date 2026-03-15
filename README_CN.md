@@ -74,6 +74,19 @@ npm run dev
 mvn spring-boot:run
 ```
 
+
+## 依赖与 SDK 选型
+
+### 腾讯云 SDK
+
+- CVM SDK：`com.tencentcloudapi:tencentcloud-sdk-java-cvm`
+- 版本：`3.1.1290`
+- 官方开源仓库：<https://github.com/TencentCloud/tencentcloud-sdk-java>
+
+### Billing 说明
+
+当前仓库中的账单能力通过项目内适配层接入，未直接启用独立 Billing SDK 依赖。
+
 ## 部署说明
 
 英文部署文档见：
