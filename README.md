@@ -116,4 +116,4 @@ Environment-specific deployment details, private infrastructure data, and sensit
 
 ## License
 
-Private / Internal Use
+GNU General Public License v3.0 (GPL-3.0)

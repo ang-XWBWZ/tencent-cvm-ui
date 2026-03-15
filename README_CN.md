@@ -126,4 +126,4 @@ gh release upload v1.0.0 ./app.jar --clobber
 
 ## License
 
-Private / Internal Use
+GNU General Public License v3.0 (GPL-3.0)
