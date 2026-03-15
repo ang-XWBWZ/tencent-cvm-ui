@@ -1,0 +1,11 @@
+# local build artifacts
+node_modules/
+target/
+.deploy/
+.run-logs/
+src/main/resources/static/assets/
+
+# local env
+*.log
+.env
+.env.*

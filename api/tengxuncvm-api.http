@@ -1,0 +1,64 @@
+### 更新凭证
+POST http://localhost:8080/api/credentials
+Content-Type: application/json
+
+{
+  "secretId": "{{secretId}}",
+  "secretKey": "{{secretKey}}",
+  "defaultRegion": "ap-guangzhou"
+}
+
+### 查询地域
+GET http://localhost:8080/api/regions
+
+### 查询可用区
+GET http://localhost:8080/api/zones?region=ap-guangzhou
+
+### 查询实例规格（含库存状态）
+GET http://localhost:8080/api/instance-types?region=ap-guangzhou
+
+### 查询镜像
+GET http://localhost:8080/api/images?region=ap-guangzhou
+
+### 价格试算
+POST http://localhost:8080/api/price
+Content-Type: application/json
+
+{
+  "region": "ap-guangzhou",
+  "zone": "ap-guangzhou-4",
+  "instanceType": "S5.MEDIUM2",
+  "imageId": "img-xxxxxxxx",
+  "systemDiskGb": 50,
+  "dataDiskGb": 0,
+  "bandwidthMbps": 2,
+  "bandwidthChargeType": "BANDWIDTH_POSTPAID_BY_HOUR",
+  "instanceChargeType": "POSTPAID_BY_HOUR"
+}
+
+### 创建实例（首页立即购买）
+POST http://localhost:8080/api/instances
+Content-Type: application/json
+
+{
+  "region": "ap-guangzhou",
+  "zone": "ap-guangzhou-4",
+  "instanceType": "S5.MEDIUM2",
+  "imageId": "img-xxxxxxxx",
+  "instanceName": "demo-cvm",
+  "systemDiskGb": 50,
+  "dataDiskGb": 0,
+  "bandwidthMbps": 2,
+  "bandwidthChargeType": "BANDWIDTH_POSTPAID_BY_HOUR",
+  "instanceChargeType": "POSTPAID_BY_HOUR",
+  "password": "{{instancePassword}}"
+}
+
+### 查询实例列表
+GET http://localhost:8080/api/instances?region=ap-guangzhou&page=1&size=10
+
+### 查询余额（真实数据）
+GET http://localhost:8080/api/billing/balance
+
+### 查询账单（真实数据）
+GET http://localhost:8080/api/billing/bills?page=1&size=10&billingCycle=2026-02
